@@ -68,9 +68,9 @@ async function getBalance() {
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     try {
       const balance = await provider.getBalance(contractAddress)
-      console.log(ethers.utils.formatEther(balance))
+      alert(ethers.utils.formatEther(balance))
     } catch (error) {
-      console.log(error)
+      alert(error)
     }
   } else {
     balanceButton.innerHTML = "Please install MetaMask"
